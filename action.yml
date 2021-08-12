@@ -1,0 +1,21 @@
+name: Update Porter App
+description: Update Porter App
+inputs:
+  app:
+    description: name of application
+    required: true
+  cluster:
+    description: cluster ID of Porter cluster
+    required: true
+  host:
+    description: host URL of Porter instance
+    required: false
+  project:
+    description: project ID of Porter project
+    required: true
+  token:
+    description: token for Porter authentication
+    required: true
+runs:
+  using: docker
+  image: Dockerfile
