@@ -9,7 +9,7 @@ steps:
   - name: Checkout code
     uses: actions/checkout@v2.3.4
   - name: Update Porter deployment
-    uses: porter-dev/porter-update-action@v2.0.0
+    uses: porter-dev/porter-update-action@v0.1.0
     with:
       app: foo
       cluster: 1234
