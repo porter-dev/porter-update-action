@@ -9,4 +9,4 @@ export PORTER_TOKEN=${INPUT_TOKEN:?input \"token\" not set or empty}
 
 : "${INPUT_APP:?input \"app\" not set or empty}"
 
-porter update --app "$INPUT_APP"
+porter update --app "$INPUT_APP" --tag $(git rev-parse --short HEAD)
