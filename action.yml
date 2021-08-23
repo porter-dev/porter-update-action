@@ -16,6 +16,10 @@ inputs:
   token:
     description: token for Porter authentication
     required: true
+  tag:
+    description: tag for the created image
+    required: false
+    default: latest
 runs:
   using: docker
   image: Dockerfile
