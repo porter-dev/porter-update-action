@@ -20,6 +20,10 @@ inputs:
     description: tag for the created image
     required: false
     default: latest
+  namespace:
+    description: namespace for the application
+    required: false
+    default: default
 runs:
   using: docker
   image: Dockerfile
