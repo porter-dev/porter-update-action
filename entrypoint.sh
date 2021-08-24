@@ -9,5 +9,6 @@ export PORTER_TOKEN=${INPUT_TOKEN:?input \"token\" not set or empty}
 
 : "${INPUT_APP:?input \"app\" not set or empty}"
 : "${INPUT_TAG:?input \"tag\" not set or empty}"
+: "${INPUT_NAMESPACE:?input \"namespace\" not set or empty}"
 
-porter update --app "$INPUT_APP" --tag "$INPUT_TAG"
+porter update --app "$INPUT_APP" --tag "$INPUT_TAG" --namespace "$INPUT_NAMESPACE"
