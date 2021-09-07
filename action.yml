@@ -14,6 +14,9 @@ inputs:
     description: namespace for the application
     required: false
     default: default
+  path:
+    description: path to build directory
+    required: false
   project:
     description: project ID of Porter project
     required: true

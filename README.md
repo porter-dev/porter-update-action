@@ -26,6 +26,7 @@ The possible inputs are:
 - `cluster`: (number, required): Cluster ID of Porter cluster.
 - `host`: (string, optional): Host URL of Porter instance. Set this if you use a self-hosted Porter instance.
 - `namespace`: (string, optional): Namespace of the application (default "default")
+- `path`: (string, optional): Path to build directory.
 - `project`: (number, required): Project ID of Porter project.
 - `tag` (string, optional): The specified tag to use (default "latest")
 - `token`: (string, required): Token for Porter authentication.
