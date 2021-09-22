@@ -12,7 +12,7 @@ export PORTER_TOKEN=${INPUT_TOKEN:?input \"token\" not set or empty}
 : "${INPUT_NAMESPACE:?input \"namespace\" not set or empty}"
 
 if [[ -z "$INPUT_PATH" ]]; then
-  porter update --app "$INPUT_APP" --tag "$INPUT_TAG" --namespace "$INPUT_NAMESPACE"
+  porter update --app "$INPUT_APP" --tag "$INPUT_TAG" --namespace "$INPUT_NAMESPACE" --stream
 else
-  porter update --app "$INPUT_APP" --tag "$INPUT_TAG" --namespace "$INPUT_NAMESPACE" --path "$INPUT_PATH"
+  porter update --app "$INPUT_APP" --tag "$INPUT_TAG" --namespace "$INPUT_NAMESPACE" --path "$INPUT_PATH" --stream
 fi
