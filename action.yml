@@ -23,7 +23,7 @@ inputs:
   token:
     description: token for Porter authentication
     required: true
-  secrets:
+  build_secrets:
     description: JSON map of secret key value pairs to be used during build
     required: false
   tag:

@@ -11,7 +11,14 @@ export PORTER_TOKEN=${INPUT_TOKEN:?input \"token\" not set or empty}
 : "${INPUT_TAG:?input \"tag\" not set or empty}"
 : "${INPUT_NAMESPACE:?input \"namespace\" not set or empty}"
 
-echo "got secrets $INPUT_SECRETS"
+for i in ${INPUT_BUILD_SECRETS//,/ }
+do
+    # call your procedure/other scripts here below
+    IFS='=' read -ra KV <<< "$i"
+    echo ${KV[0]}
+    echo ${KV[1]}
+    export "PORTERSECRET_${KV[0]}"=${KV[1]}
+done
 
 if [[ -z "$INPUT_PATH" ]]; then
   porter update --app "$INPUT_APP" --tag "$INPUT_TAG" --namespace "$INPUT_NAMESPACE" --build-secrets "$INPUT_SECRETS" --stream
