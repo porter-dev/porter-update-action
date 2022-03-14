@@ -24,7 +24,7 @@ inputs:
     description: token for Porter authentication
     required: true
   build_secrets:
-    description: JSON map of secret key value pairs to be used during build
+    description: Comma-separated list of key=value pairs for build secrets
     required: false
   tag:
     description: tag for the created image
