@@ -15,8 +15,6 @@ for i in ${INPUT_BUILD_SECRETS//,/ }
 do
     # call your procedure/other scripts here below
     IFS='=' read -ra KV <<< "$i"
-    echo ${KV[0]}
-    echo ${KV[1]}
     export "PORTERSECRET_${KV[0]}"=${KV[1]}
 done
 
