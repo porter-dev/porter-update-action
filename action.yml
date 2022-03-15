@@ -1,4 +1,4 @@
-name: Update Porter App (logan)
+name: Update Porter App
 description: Update Porter App
 inputs:
   app:
