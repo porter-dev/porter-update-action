@@ -1,4 +1,5 @@
-FROM public.ecr.aws/o1j4x7p4/porter-cli:latest
+FROM ghcr.io/porter-dev/porter/porter-cli:v0.42.8
+LABEL org.opencontainers.image.source="https://github.com/porter-dev/porter"
 
 COPY entrypoint.sh /action/
 
