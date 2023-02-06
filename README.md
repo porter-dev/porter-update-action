@@ -24,6 +24,7 @@ The possible inputs are:
 
 - `app`: (string, required): Name of application.
 - `cluster`: (number, required): Cluster ID of Porter cluster.
+- `dockerfile`: (string, optional): path to the Dockerfile used to build the image.
 - `host`: (string, optional): Host URL of Porter instance. Set this if you use a self-hosted Porter instance.
 - `namespace`: (string, optional): Namespace of the application (default "default")
 - `path`: (string, optional): Path to build directory.
