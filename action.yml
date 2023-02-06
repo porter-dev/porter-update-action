@@ -7,6 +7,9 @@ inputs:
   cluster:
     description: cluster ID of Porter cluster
     required: true
+  dockerfile:
+    description: path to the dockerfile used to build the application
+    required: false
   host:
     description: host URL of Porter instance
     required: false
