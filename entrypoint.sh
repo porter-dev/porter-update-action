@@ -13,6 +13,8 @@ export PORTER_TOKEN=${INPUT_TOKEN:?input \"token\" not set or empty}
 
 if [[ -z "$INPUT_PATH" ]]; then
   porter update --app "$INPUT_APP" --tag "$INPUT_TAG" --namespace "$INPUT_NAMESPACE" --stream
+elif [[ -z "$INPUT_DOCKERFILE" ]]; then
+  porter update --app "$INPUT_APP" --dockerfile "$INPUT_DOCKERFILE" --tag "$INPUT_TAG" --namespace "$INPUT_NAMESPACE" --method docker --stream
 else
   porter update --app "$INPUT_APP" --tag "$INPUT_TAG" --namespace "$INPUT_NAMESPACE" --path "$INPUT_PATH" --stream
 fi
