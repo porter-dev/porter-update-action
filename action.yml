@@ -26,6 +26,9 @@ inputs:
   token:
     description: token for Porter authentication
     required: true
+  build_secrets:
+    description: Comma-separated list of key=value pairs for build secrets
+    required: false
   tag:
     description: tag for the created image
     required: false

@@ -11,6 +11,13 @@ export PORTER_TOKEN=${INPUT_TOKEN:?input \"token\" not set or empty}
 : "${INPUT_TAG:?input \"tag\" not set or empty}"
 : "${INPUT_NAMESPACE:?input \"namespace\" not set or empty}"
 
+for i in ${INPUT_BUILD_SECRETS//,/ }
+do
+    # call your procedure/other scripts here below
+    IFS='=' read -ra KV <<< "$i"
+    export "PORTERSECRET_${KV[0]}"=${KV[1]}
+done
+
 if [[ -z "$INPUT_PATH" ]]; then
   porter update --app "$INPUT_APP" --tag "$INPUT_TAG" --namespace "$INPUT_NAMESPACE" --stream
 elif [[ -z "$INPUT_DOCKERFILE" ]]; then

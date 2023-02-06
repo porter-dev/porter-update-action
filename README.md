@@ -15,6 +15,7 @@ steps:
       cluster: 1234
       project: 4321
       token: ${{ secrets.PORTER_TOKEN }}
+      build_secrets: key1=val1,key2=val2  # Used internally by Porter
 ```
 
 Configuration Options
@@ -31,3 +32,4 @@ The possible inputs are:
 - `project`: (number, required): Project ID of Porter project.
 - `tag` (string, optional): The specified tag to use (default "latest")
 - `token`: (string, required): Token for Porter authentication.
+- `build_secrets`: (string, optional): Comma-separated key-value pairs of secrets to be used in the build
